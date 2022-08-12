@@ -141,6 +141,16 @@ button.sign-up {
   border-radius: 8px;
 }
 
+button.sign-up:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: #456a89;
+}
+
+button.sign-up:active {
+    background-color: #2c3944;
+}
+
+
 input.error {
   border: 2px solid rgb(213, 0, 0);
 }
