@@ -16,20 +16,29 @@ passwordMessage.classList.add('passwordMessage');
 // Quick check to see if passwords are the same
 const passwordsMatch = () => password.value === confirmPassword.value;
 
+const removePasswordClasses = () => {
+    allPasswordInputs.forEach((password) => {
+        password.classList.remove('error', 'passwordsMatch');
+      });
+    passwordMessage.classList.remove('error','passwordsMatch');
+}
+
 // Displays a message to the user if their passwords match or not
 const showPasswordMessage = () => {
+  if (password.value == '' && confirmPassword.value == '') {
+    mainFormDiv.removeChild(passwordMessage);
+    removePasswordClasses();
+    return;
+  }
   if (passwordsMatch()) {
-    allPasswordInputs.forEach((password) => {
-      password.classList.remove('error');
-    });
-    passwordMessage.classList.remove('error');
+    removePasswordClasses();
     passwordMessage.classList.add('passwordsMatch');
     passwordMessage.textContent = passwordMessages.match;
   } else {
+    removePasswordClasses();
     allPasswordInputs.forEach((password) => {
       password.classList.add('error');
     });
-    passwordMessage.classList.remove('passwordsMatch');
     passwordMessage.classList.add('error');
     passwordMessage.textContent = passwordMessages.noMatch;
   }
