@@ -13,39 +13,59 @@
 <body>
     <div class="container">
         <div class="left-side">
-            <h1>Boar-to-Door</h1>
+            <h1>Boar2Door</h1>
             <div class="shout-out">
                 Photo by &nbsp;<a
                     href="https://unsplash.com/es/@tventos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikhail
-                     Tyrsyna</a> &nbsp; on &nbsp; <a
+                    Tyrsyna</a> &nbsp; on &nbsp; <a
                     href="https://unsplash.com/s/photos/delivery-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
         </div>
         <div class="right-side">
             <div class="welcome-cta">
-                <p>Worldclass <em>straight-from-the-butcher</em> bacon delivered <em>right</em> to your door.</p>
-                <p>Sign up now!</p>
+                <h2>The Bacon Delivery Service</h2>
+                <p>Delicious bacon, <em>straight-from-the-butcher</em>, delivered right to your door.</p>
+                
             </div>
             <form>
-                <div class="name">
-                    <div class="text-input">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name">
+                <div class="main-form">
+                    <h3>Limited access. Only 5 spaces left!</h3>
+                    <div class="form-row">
+                        <div class="text-input">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        <div class="text-input">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
                     </div>
-                    <div class="text-input">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name">
+                    <div class="form-row">
+                        <div class="text-input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="text-input">
+                            <label for="phone-number">Phone number</label>
+                            <input type="tel" id="phone-number" name="phone-number" 
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                title="ex. 555-555-5555">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="text-input">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="text-input">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
                     </div>
                 </div>
-                <div class="contact-info">
-
-                </div>
-                <div class="password">
-
-                </div>
-                <button>Sign Up</button>
-              </form>
-              <div class="login">Already have an account? <a href="http://">login</a></div>
+                <button class="sign-up">Sign Up</button>
+            </form>
+            <div class="login">Already have an account? <a href="http://">log in</a></div>
         </div>
     </div>
 </body>
